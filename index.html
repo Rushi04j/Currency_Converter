@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <h1>&#x1F4B1; Currency Converter</h1>
+        <p>Convert currencies with real-time exchange rates</p>
+        <div class="signature">
+            <span class="signature-text">Coded by Rushikesh Joshi</span>
+        </div>
+    </div>
+
+        <form class="converter-form" id="converterForm">
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" class="amount-input" placeholder="Enter amount" value="1" min="0" step="0.01">
+            </div>
+
+            <div class="input-group">
+                <label for="fromCurrency">From</label>
+                <select id="fromCurrency" class="currency-dropdown">
+                    <option value="">Select currency...</option>
+                </select>
+            </div>
+
+            <button type="button" class="swap-button" id="swapButton" title="Swap currencies">
+                ⇅
+            </button>
+
+            <div class="input-group">
+                <label for="toCurrency">To</label>
+                <select id="toCurrency" class="currency-dropdown">
+                    <option value="">Select currency...</option>
+                </select>
+            </div>
+
+            <button type="submit" class="convert-button" id="convertButton">
+                Convert Currency
+            </button>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Converting currency...</p>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="result" id="result">
+            <div class="result-amount" id="resultAmount"></div>
+            <div class="result-details" id="resultDetails"></div>
+            <div class="exchange-rate" id="exchangeRate"></div>
+        </div>
+
+        <div class="popular-currencies">
+            <h3>🌟 Popular Currencies</h3>
+            <div class="currency-grid" id="popularCurrencies"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
